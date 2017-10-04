@@ -1,6 +1,7 @@
 package br.com.example.domain.product;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 
 import java.math.BigDecimal;
@@ -24,5 +25,6 @@ public class ProductTest extends HexagonalArchitectureApplicationTests {
 		assertEquals("Geladeira", product.name());
 		assertEquals("Brastemp Frost Free Clean BRM39", product.description());
 		assertThat(BigDecimal.valueOf(1300.00),  Matchers.comparesEqualTo(product.amount()));
+		assertFalse(product.isReserved());
 	}
 }

@@ -19,12 +19,10 @@ public class Product {
 	
 	@Embedded
 	private ProductId productId;
-	
 	private String name;
-	
 	private String description;
-	
 	private BigDecimal amount;
+	private boolean reserved;
 
 	@SuppressWarnings("unused")
 	private Product() {}
@@ -34,9 +32,13 @@ public class Product {
 		setName(name);
 		setDescription(description);
 		setAmount(amount);
-		
+		setReserved(false);
 		//Publicando eventos de dominio
 		DomainRegister.domainEventPublisher().publish(new ProductCreated(productId));
+	}
+	
+	public void flagToReserved() {
+		setReserved(true);
 	}
 
 	public ProductId productId() {
@@ -85,6 +87,14 @@ public class Product {
 
 	private void setAmount(BigDecimal amount) {
 		this.amount = amount;
+	}
+
+	public boolean isReserved() {
+		return reserved;
+	}
+
+	public void setReserved(boolean reserved) {
+		this.reserved = reserved;
 	}
 	
 }

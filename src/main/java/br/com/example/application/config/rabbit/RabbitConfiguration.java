@@ -1,4 +1,4 @@
-package br.com.example.application;
+package br.com.example.application.config.rabbit;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -53,7 +53,7 @@ public class ProductId {
 
 	@Override
 	public String toString() {
-		return "ProductId [productId=" + productId + "]";
+		return productId;
 	}
 	
 }

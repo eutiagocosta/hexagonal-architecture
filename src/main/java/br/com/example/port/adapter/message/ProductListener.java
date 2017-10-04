@@ -4,7 +4,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import br.com.example.application.RabbitConfiguration;
+import br.com.example.application.config.rabbit.RabbitConfiguration;
 import br.com.example.domain.DomainEvent;
 
 @Component

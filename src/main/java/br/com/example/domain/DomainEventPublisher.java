@@ -4,7 +4,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.example.application.RabbitConfiguration;
+import br.com.example.application.config.rabbit.RabbitConfiguration;
 
 @Service
 public class DomainEventPublisher {
