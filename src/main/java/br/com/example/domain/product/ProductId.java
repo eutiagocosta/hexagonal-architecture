@@ -1,5 +1,7 @@
 package br.com.example.domain.product;
 
+import java.util.UUID;
+
 import javax.persistence.Embeddable;
 
 @Embeddable
@@ -12,6 +14,10 @@ public class ProductId {
 	
 	public ProductId(String productId) {
 		setProductId(productId);
+	}
+	
+	public static ProductId newIdentity() {
+		return new ProductId(UUID.randomUUID().toString().toUpperCase());
 	}
 	
 	public String id() {

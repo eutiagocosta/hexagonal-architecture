@@ -1,4 +1,4 @@
-package br.com.example.port.adapter.message;
+package br.com.example.adapter.amqp;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -9,7 +9,7 @@ import br.com.example.domain.DomainEvent;
 
 @Component
 @RabbitListener(id = "productListener", queues = RabbitConfiguration.QUEUE_PRODUCT_LISTENER)
-public class ProductListener {
+public class ProductAdapterListener {
 
 	@RabbitHandler
 	public <T extends DomainEvent> void eventHandle(T event) {

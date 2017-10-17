@@ -14,11 +14,11 @@ public class ProductService {
 	private ProductRepository repository;
 	
 	@Autowired
-	private StockService stockService;
+	private StockApiService apiService;
 
 	public ProductId register(ProductCommand command) {
 
-		Product product = new Product(repository.nextIdentity(), 
+		Product product = new Product(ProductId.newIdentity(), 
 				command.getName(), 
 				command.getDescription(),
 				command.getAmount());
@@ -38,7 +38,7 @@ public class ProductService {
 
 		Product product = repository.getProductById(productId).orElseThrow(ProductNotFoundException::new);
 
-		if (stockService.productIsAvailable(productId)) {
+		if (apiService.productIsAvailable(productId)) {
 			product.flagToReserved();
 			repository.save(product);
 		}

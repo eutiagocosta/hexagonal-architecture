@@ -1,4 +1,4 @@
-package br.com.example.port.adapter.repository;
+package br.com.example.adapter.repository;
 
 import java.util.Optional;
 

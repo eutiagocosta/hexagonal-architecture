@@ -1,4 +1,4 @@
-package br.com.example.port.adapter.http;
+package br.com.example.adapter.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import br.com.example.domain.product.ProductId;
-import br.com.example.domain.product.StockService;
+import br.com.example.domain.product.StockApiService;
 
 @Service
-public class StockServiceHttp implements StockService{
+public class StockApiAdapter implements StockApiService{
 
 	@Autowired
 	private RestTemplate template;

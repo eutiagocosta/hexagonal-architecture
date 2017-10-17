@@ -1,4 +1,4 @@
-package br.com.example.port.adapter.resource;
+package br.com.example.adapter.http;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

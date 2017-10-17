@@ -1,6 +1,6 @@
 package br.com.example.domain.product;
 
-public interface StockService {
+public interface StockApiService {
 
 	boolean productIsAvailable(ProductId productId);
 
